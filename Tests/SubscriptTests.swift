@@ -104,7 +104,7 @@ class SubscriptTests: XCTestCase {
         XCTAssertNotNil(json[2]["null"].null)
         XCTAssertNotNil(json[2,"null"].null)
         let keys:[JSONSubscriptType] = [1, "a"]
-        XCTAssertEqual(json[keys], JSON(rawValue: "A")!)
+        XCTAssertEqual(json[keys], JSON(rawValue: "A" as AnyObject)!)
     }
     
     func testDictionaryAllNumber() {
